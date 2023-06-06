@@ -17,9 +17,6 @@ class Bank(ABC):
             # Initialize user's credit, deposit, and money information
  
     def credit(self, user, name_of_credit, value):
-        # print(['user', user])
-        # print(self.users)
-        # print(self.users[user])
         assert user in self, "No such user!"  # Check if user exists
         self.users[user]["credits"][name_of_credit] = value
         self.users[user]["money"] += value
